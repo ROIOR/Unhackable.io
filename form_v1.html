@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Unhackable Tools</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <meta name="google-signin-scope" content="profile email">
+  <meta name="google-signin-client_id" content="780891857070-76g8a3aputjaoncavli3fgj1b3rmm4sl.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script type="application/javascript">
+  function getIP(json) {
+    document.write(json.ip);
+  }
+  </script>
+</head>
+<body>
+	
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+	<p class="navbar-text">PenTest Online Tools</p>
+	<p class="navbar-text">Your Public IP : <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script></p>
+  </div>
+
+</nav>
+	<div class="jumbotron text-center">
+			<div class="btn-group">
+		<a href=".\DevOps.html" class="btn btn-primary">Home!</a>				
+		</div>
+		<div class="btn-group">
+		<button type="button" class="btn btn-primary">Register</button>
+		</div>
+
+  <h2>UnHackable.io</h2>
+  <p>Welcome to UnHackable.io Tools</p>
+</div>
+  
+<div class="container">
+  <div class="row">
+      
+	<form action="SETSQL_FW_Rules.php" method="POST" target="_blank">	  
+	<div class="col-lg-4">
+	<h2>Scan For Open Ports</h2>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Domain / IP">
+      <span class="input-group-btn">
+        <a href="SETSQL_FW_Rules.php" class="btn btn-success" role="button" method="POST" target="_blank">Go!</a>
+      </span>
+    </div><!-- /input-group -->
+	</div><!-- /.col-lg-6 -->	</form>    
+	</div>
+    
+	<div class="col-sm-4">
+      <h2>Check Who is Domain info</h2>
+	<form action="GetWebApp.php" method="POST" target="_blank">	  
+	<div class="form-group">
+		<input type="text" name="WebApp" class="form-control" id="WebApp" placeholder="Who is Domain name">
+	  </div>
+	  <!--input type="submit" class="btn btn-success" name="WebApp" value="Go!"></input-->
+	</form>    
+	</div>
+	
+    <div class="col-sm-4">
+      <h2>Info</h2>
+	  <label for="Your Public IP">Your Public IP : <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script></label>
+	  <div>
+	  <label for="Azure Status">Azure Status</label>
+	  <a href="https://azure.microsoft.com/en-us/status/feed/">Subscribe to What's New</a>
+	  <link href="http://webdesign.about.com/library/z_whats_new.rss" rel="alternate" type="application/rss+xml" title="What's New on About.com Web Design / HTML" />
+	  </div>
+	  <a href="http://azure.microsoft.com/en-us/status/feed/">
+	  <div>
+	  <a href="GetTrafficPriority.php" class="btn btn-primary" target="_blank">View Traffic Priority</a>
+	  </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
