@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+	<?php 
+    if (isset($_POST['submit'])) {
+	$ip = $_POST['query'] ;
+	echo $ip ;
+		}
+	?>
+
+<html>
 <head>
-  <title>Unhackable Tools</title>
+  <title>Unhackable Tools! </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -15,6 +21,7 @@
     document.write(json.ip);
   }
   </script>
+  
 </head>
 <body>
 	
@@ -33,50 +40,44 @@
 		<button type="button" class="btn btn-primary">Register</button>
 		</div>
 
-  <h2>UnHackable.io</h2>
+ <!-- <h2>UnHackable.io</h2> -->
+ <img src="/Logo/UNHACKABLELOGO.png" alt="UNHACKABLE" vspace="5" class="center-block" class="img-responsive"/>
   <p>Welcome to UnHackable.io Tools</p>
 </div>
   
 <div class="container">
   <div class="row">
       
-	<form action="SETSQL_FW_Rules.php" method="POST" target="_blank">	  
+	<form action="" method="post">	  
 	<div class="col-lg-4">
-	<h2>Scan For Open Ports</h2>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Domain / IP">
-      <span class="input-group-btn">
-        <a href="SETSQL_FW_Rules.php" class="btn btn-success" role="button" method="POST" target="_blank">Go!</a>
-      </span>
-    </div><!-- /input-group -->
-	</div><!-- /.col-lg-6 -->	</form>    
-	</div>
-    
-	<div class="col-sm-4">
-      <h2>Check Who is Domain info</h2>
-	<form action="GetWebApp.php" method="POST" target="_blank">	  
-	<div class="form-group">
-		<input type="text" name="WebApp" class="form-control" id="WebApp" placeholder="Who is Domain name">
-	  </div>
-	  <!--input type="submit" class="btn btn-success" name="WebApp" value="Go!"></input-->
-	</form>    
-	</div>
+	<h2>Scan For Open Ports</h2>  
+   	<input type="text" name="query" class="form-control" placeholder="Domain / IP">
+	<input type="submit" name="submit" value="Go!"  >
+	</div><!-- /.col-lg-6 -->
 	
-    <div class="col-sm-4">
-      <h2>Info</h2>
-	  <label for="Your Public IP">Your Public IP : <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script></label>
-	  <div>
-	  <label for="Azure Status">Azure Status</label>
-	  <a href="https://azure.microsoft.com/en-us/status/feed/">Subscribe to What's New</a>
-	  <link href="http://webdesign.about.com/library/z_whats_new.rss" rel="alternate" type="application/rss+xml" title="What's New on About.com Web Design / HTML" />
-	  </div>
-	  <a href="http://azure.microsoft.com/en-us/status/feed/">
-	  <div>
-	  <a href="GetTrafficPriority.php" class="btn btn-primary" target="_blank">View Traffic Priority</a>
-	  </div>
-    </div>
-  </div>
-</div>
+	</form> 
+	
+    
+	<form action="GetWebApp.php" method="POST" >	
+	<div class="col-lg-4">
+    <h2>Check Who is Domain info</h2>  
+	<input type="text" name="whois" class="form-control" placeholder="Who is Domain name">
+	<input type="submit"  value="Go!"  >
+	</div>
+	</form>    
+
+	<form action="GetWebApp.php" method="POST" >	
+	<div class="col-lg-4">
+    <h2>Scan yourSelf</h2>  
+	<input type="text" name="whois" class="form-control" placeholder="Scan your self">
+	<input type="submit" value="Go!"  >
+	</div>
+	</form> 
+	
+
+		</div>
+		
+	</div>
 </body>
 </html>
 
