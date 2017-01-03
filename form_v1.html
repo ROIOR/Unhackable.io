@@ -41,21 +41,33 @@
 <div class="container">
   <div class="row">
       
-	<form action="" method="post">	  
+	<form action="" method="post" >
 	<div class="col-lg-4">
-	<h2>Scan For Open Ports</h2>  
+	<h2>Scan For Open Ports</h2>
    	<input type="text" name="query" class="form-control" placeholder="Domain / IP">
 	<input type="submit" name="submit" value="Go!"  >
-	</div><!-- /.col-lg-6 -->
 	</form>
-		  
-			<?php 
-			if (isset($_POST["submit"])) {
-			$ip = $_POST["query"] ;
+	<p id="demo"></p>
+		
+		<?php
+		if(isset($_POST['submit'])){
+			$ip = $_POST['query'];
 			echo $ip ;
-				}
-			?>
-	  
+			function runnmap($ip) {
+			$nmapresult = exec("nmap -T4 -F $ip << NUL");
+			echo $nmapresult;
+			$tohtml = shell_exec("xsltproc scan.xml -o _report.html");
+			}
+			if (empty($ip)) {
+				echo "IP is empty";
+			} else {
+			}
+			runnmap($ip);
+		}
+		?>
+	
+	</div>
+
     
 	<form action="GetWebApp.php" method="POST" >	
 	<div class="col-lg-4">
