@@ -48,13 +48,14 @@
 	<input type="submit" name="submit" value="Go!"  >
 	</div><!-- /.col-lg-6 -->
 	</form>
-	<?php 
-    if (isset($_POST['submit'])) {
-	$ip = $_POST['query'] ;
-	echo $ip ;
-		}
-	?>
-	
+		<div>  
+			<?php 
+			if (isset($_POST['submit'])) {
+			$ip = $_POST['query'] ;
+			echo $ip ;
+				}
+			?>
+	  </div>
     
 	<form action="GetWebApp.php" method="POST" >	
 	<div class="col-lg-4">
